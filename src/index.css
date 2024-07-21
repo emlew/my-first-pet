@@ -36,6 +36,7 @@ h1 {
   line-height: 1.1;
   background: linear-gradient(40deg, #001765, #001765, #3E8AD6, #3E8AD6, #001765, #001765);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -136,4 +137,20 @@ button:focus-visible {
 button:hover {
   background-color: #001765;
   color: #E7EDF9;
+}
+
+#progress {
+  position: absolute;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+#progress-bar {
+  background: white;
+  width: 10vw;
+  border-radius: 8px;
 }

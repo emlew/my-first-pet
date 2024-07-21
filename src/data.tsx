@@ -1,4 +1,4 @@
-type Pet = "Cat" | "Dog" | "Bird" | "Rabbit" | "Guinea Pig" | "Fish" | "Reptile" | "Ferret";
+export type Pet = "Cat" | "Dog" | "Bird" | "Rabbit" | "Guinea Pig" | "Fish" | "Reptile" | "Ferret";
 
 type PetInfo = {
     name: Pet,

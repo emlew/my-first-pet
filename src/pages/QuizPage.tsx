@@ -1,5 +1,11 @@
-import { Quiz } from "../components";
+import { Progress, Quiz } from "../components";
 
 export const QuizPage: React.FC = () => {
-  return <Quiz />;
+
+  return (
+    <>
+      <Quiz />
+      <Progress />
+    </>
+  );
 };
