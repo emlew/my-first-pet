@@ -1,15 +1,14 @@
-import { PETS } from "../data";
-
-const petNames = Object.keys(PETS);
-
-export const Progress: React.FC = () => {
-  const height = 2;
+export const Progress: React.FC<{
+  scores: {
+    [k: string]: number;
+  };
+}> = ({ scores }) => {
   return (
     <div id="progress">
-      {petNames.map((p) => {
+      {Object.entries(scores).map((p) => {
         return (
-          <p id="progress-bar" style={{ height: height * 10 + "vh" }}>
-            {p}
+          <p key={p[0]} id="progress-bar" style={{ height: p[1] * 10 + "vh" }}>
+            {/* {p[0]} */}
           </p>
         );
       })}

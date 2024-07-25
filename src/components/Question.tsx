@@ -8,7 +8,7 @@ export const Question: React.FC<{
       <h2>{question}</h2>
       <div id="question-options">
         {options.map((option: string) => {
-          return <button onClick={() => onClick()}>{option}</button>;
+          return <button key={option} onClick={() => onClick()}>{option}</button>;
         })}
       </div>
     </div>
