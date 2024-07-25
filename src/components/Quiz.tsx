@@ -2,12 +2,13 @@ import { Question } from "./Question";
 import { useState } from "react";
 import { QUESTIONS } from "../data";
 
-export const Quiz: React.FC<{ updateFn: () => void }> = ({ updateFn }) => {
+export const Quiz: React.FC<{ updateFn: (updates: number[]) => void }> = ({ updateFn }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
 
-  function handleClick() {
+  const handleClick = (choice: number) => {
+    const updates = QUESTIONS[questionNumber].increments[choice];
     setQuestionNumber(questionNumber + 1);
-    updateFn();
+    updateFn(updates);
     if (questionNumber >= QUESTIONS.length) {
       // finish the quiz
     }

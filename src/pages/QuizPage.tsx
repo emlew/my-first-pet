@@ -9,13 +9,11 @@ export const QuizPage: React.FC = () => {
     Object.fromEntries(petNames.map((p) => [p, 1]))
   );
 
-  const updateScores = () => {
-    const updates = [1, 0, 1, 0, 1, 0, 1, 0];
+  const updateScores = (updates: number[]) => {
     const newScores = Object.fromEntries(
       Object.entries(scores).map((p, i) => [p[0], p[1] + updates[i]])
     );
     setScores(newScores);
-    console.log("updated!");
   };
 
   return (
