@@ -1,4 +1,4 @@
-import { PETS } from "../data";
+import { ProgressBar } from "./ProgressBar";
 
 export const Progress: React.FC<{
   scores: {
@@ -6,18 +6,18 @@ export const Progress: React.FC<{
   };
   isFinished: boolean;
 }> = ({ scores, isFinished }) => {
+  const max = Math.max(...Object.values(scores));
+
   return (
     <div id="progress">
-      {Object.entries(scores).map((p,i) => {
+      {Object.entries(scores).map((p) => {
         return (
-          <div
+          <ProgressBar
             key={p[0]}
-            id="progress-bar"
-            style={{ height: p[1] > 0 ? p[1] * 10 + "vh" : "10vh" }}
-          >
-            <h3>{isFinished && p[0]}</h3>
-            <p>{isFinished && PETS[p[0]].info}</p>
-          </div>
+            score={p}
+            isWinner={isFinished && p[1] === max}
+            showDetails={isFinished}
+          />
         );
       })}
     </div>

@@ -6,10 +6,10 @@ import { Tabs } from "./Tabs";
 export const PetInfo: React.FC = () => {
   const [selectedPet, setSelectedPet] = useState("");
 
-  function handleSelect(selectedButton: string) {
+  const handleSelect = (selectedButton: string) => {
     setSelectedPet(selectedButton);
     // console.log(selectedTopic);
-  }
+  };
 
   let tabContent = <p>Please select a topic.</p>;
 
