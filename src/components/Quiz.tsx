@@ -1,6 +1,7 @@
 import { Question } from "./Question";
 import { useState } from "react";
 import { QUESTIONS } from "../data";
+import { LinearProgress } from "@mui/material";
 
 type Props = {
   updateFn: (updates: number[]) => void;
@@ -21,6 +22,12 @@ export const Quiz: React.FC<Props> = ({ updateFn, onFinish }) => {
 
   return (
     <>
+      <LinearProgress
+        id="linear-progress"
+        variant="determinate"
+        value={(100 * questionNumber) / QUESTIONS.length}
+        color={"inherit"}
+      />
       {questionNumber < QUESTIONS.length && (
         <Question
           question={QUESTIONS[questionNumber].question}
