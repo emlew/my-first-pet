@@ -11,7 +11,11 @@ export const Question: React.FC<{
       <div id="question-options">
         {options.map((option: string, i) => {
           return (
-            <Button variant={"contained"} key={option} onClick={() => onClick(i)}>
+            <Button
+              variant={"contained"}
+              key={option}
+              onClick={() => onClick(i)}
+            >
               {option}
             </Button>
           );

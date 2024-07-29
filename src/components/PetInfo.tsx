@@ -4,11 +4,11 @@ import { TabButton } from "./TabButton";
 import { Tabs } from "./Tabs";
 
 export const PetInfo: React.FC = () => {
-  const [selectedPet, setSelectedPet] = useState("");
+  const [selectedPet] = useState("");
 
-  const handleSelect = (selectedButton: string) => {
-    setSelectedPet(selectedButton);
-  };
+  // const handleSelect = (selectedButton: string) => {
+  //   setSelectedPet(selectedButton);
+  // };
 
   let tabContent = <p>Please select a topic.</p>;
 
@@ -25,14 +25,13 @@ export const PetInfo: React.FC = () => {
   return (
     <section title="All Pet Info" id="pets">
       <Tabs
-        ButtonsContainer="menu"
         buttons={
           <>
             {Object.entries(PETS).map((pet) => {
               return (
                 <TabButton
                   isSelected={selectedPet === pet[1].name}
-                  onClick={() => handleSelect(pet[1].name)}
+                  // onClick={() => handleSelect(pet[1].name)}
                 >
                   {pet[1].info}
                 </TabButton>

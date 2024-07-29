@@ -6,7 +6,11 @@ export const TabButton: React.FC<{
 }> = ({ children, isSelected, ...props }) => {
   return (
     <li>
-      <Button variant={"contained"} className={isSelected ? "active" : undefined} {...props}>
+      <Button
+        variant={"contained"}
+        className={isSelected ? "active" : undefined}
+        {...props}
+      >
         {children}
       </Button>
     </li>
