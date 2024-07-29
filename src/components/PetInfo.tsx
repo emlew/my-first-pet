@@ -8,7 +8,6 @@ export const PetInfo: React.FC = () => {
 
   const handleSelect = (selectedButton: string) => {
     setSelectedPet(selectedButton);
-    // console.log(selectedTopic);
   };
 
   let tabContent = <p>Please select a topic.</p>;
