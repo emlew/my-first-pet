@@ -55,7 +55,7 @@ h2 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid transparent;
   padding: 0.6rem 1.2rem;
   font-size: 1em;
@@ -161,7 +161,7 @@ button:hover {
 #progress-bar {
   background: white;
   width: 10vw;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 #navbar {
@@ -179,12 +179,12 @@ button:hover {
 }
 
 #navlink {
-  height: 48px;
+  height: 44px;
   width: 72px;
   display: grid;
   place-items: center;
   color: #ffffff;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 #navlink.active {

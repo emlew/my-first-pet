@@ -1,3 +1,5 @@
+import { Button } from "@mui/material";
+
 export const Question: React.FC<{
   question: string;
   options: string[];
@@ -8,7 +10,11 @@ export const Question: React.FC<{
       <h2>{question}</h2>
       <div id="question-options">
         {options.map((option: string, i) => {
-          return <button key={option} onClick={() => onClick(i)}>{option}</button>;
+          return (
+            <Button variant={"contained"} key={option} onClick={() => onClick(i)}>
+              {option}
+            </Button>
+          );
         })}
       </div>
     </div>
