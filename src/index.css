@@ -121,14 +121,11 @@ button:focus-visible {
   border-radius: 6px;
   background-color: #001765;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #e7edf9;
 }
 
 #tab-content h3 {
   margin: 0;
-}
-
-#tab-content code {
-  font-size: 1rem;
 }
 
 #question-options {

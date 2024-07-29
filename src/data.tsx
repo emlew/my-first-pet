@@ -16,35 +16,35 @@ type PetInfo = {
 export const PETS: Record<string, PetInfo> = {
   Cat: {
     name: "Cat",
-    info: "Cat",
+    info: "Independent and curious, cats are affectionate yet enjoy their alone time. They are low-maintenance, making them ideal for busy owners.",
   },
   Dog: {
     name: "Dog",
-    info: "Dog",
+    info: "Loyal and social, dogs are energetic companions that thrive on attention and regular exercise. They vary greatly in size, temperament, and activity level.",
   },
   Bird: {
     name: "Bird",
-    info: "Bird",
+    info: "Birds are vibrant and intelligent pets, often enjoying interaction with their owners. They require mental stimulation and space to fly.",
   },
   Rabbit: {
     name: "Rabbit",
-    info: "Rabbit",
+    info: "Gentle and quiet, rabbits are social animals that enjoy companionship. They need ample space to hop and a diet rich in hay and vegetables.",
   },
   "Guinea Pig": {
     name: "Guinea Pig",
-    info: "Guinea Pig",
+    info: "Friendly and vocal, guinea pigs are social creatures that thrive in pairs or groups. They require a diet high in vitamin C and a spacious cage.",
   },
   Fish: {
     name: "Fish",
-    info: "Fish",
+    info: "Peaceful and colorful, fish can add tranquility to any space. They require an appropriately sized aquarium with proper filtration and regular maintenance.",
   },
   Reptile: {
     name: "Reptile",
-    info: "Reptile",
+    info: "Reptiles, like snakes and lizards, are low-maintenance pets that require specific habitats and temperature control. They can be fascinating to observe.",
   },
   Ferret: {
     name: "Ferret",
-    info: "Ferret",
+    info: "Playful and curious, ferrets are energetic pets that love to explore and interact with their owners. They need a secure environment and regular playtime.",
   },
 };
 

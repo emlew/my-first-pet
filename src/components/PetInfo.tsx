@@ -32,7 +32,7 @@ export const PetInfo: React.FC = () => {
                   onClick={() => handleSelect(pet[1].name)}
                   className={selectedPet === pet[1].name ? "active" : undefined}
                 >
-                  {pet[1].info}
+                  {pet[1].name}
                 </Button>
               );
             })}
