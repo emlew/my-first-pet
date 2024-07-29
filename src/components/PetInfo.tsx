@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { PETS } from "../data";
-import { TabButton } from "./TabButton";
 import { Tabs } from "./Tabs";
+import { Button } from "@mui/material";
 
 export const PetInfo: React.FC = () => {
-  const [selectedPet] = useState("");
+  const [selectedPet, setSelectedPet] = useState("");
 
-  // const handleSelect = (selectedButton: string) => {
-  //   setSelectedPet(selectedButton);
-  // };
+  const handleSelect = (selectedButton: string) => {
+    setSelectedPet(selectedButton);
+  };
 
   let tabContent = <p>Please select a topic.</p>;
 
@@ -21,7 +21,6 @@ export const PetInfo: React.FC = () => {
     );
   }
 
-  // TODO: check tabs props in red
   return (
     <section title="All Pet Info" id="pets">
       <Tabs
@@ -29,12 +28,12 @@ export const PetInfo: React.FC = () => {
           <>
             {Object.entries(PETS).map((pet) => {
               return (
-                <TabButton
-                  isSelected={selectedPet === pet[1].name}
-                  // onClick={() => handleSelect(pet[1].name)}
+                <Button
+                  onClick={() => handleSelect(pet[1].name)}
+                  className={selectedPet === pet[1].name ? "active" : undefined}
                 >
                   {pet[1].info}
-                </TabButton>
+                </Button>
               );
             })}
           </>
