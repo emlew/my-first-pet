@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import { PETS } from "../data";
 
 export const ProgressBar: React.FC<{
@@ -8,15 +9,15 @@ export const ProgressBar: React.FC<{
   // TODO: add color contrast to make details more readable
   // TODO: add mobile functionality
   return (
-    <div
+    <Box
       id="progress-bar"
       style={{
         height: score[1] > 0 ? score[1] * 10 + "vh" : "10vh",
         background: isWinner ? "#3E8AD6" : "default",
       }}
     >
-      <h3>{showDetails && score[0]}</h3>
-      <p>{showDetails && isWinner && PETS[score[0]].info}</p>
-    </div>
+      <Typography variant="h5">{showDetails && score[0]}</Typography>
+      <Typography>{showDetails && isWinner && PETS[score[0]].info}</Typography>
+    </Box>
   );
 };

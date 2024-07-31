@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export const Question: React.FC<{
   question: string;
@@ -6,9 +6,9 @@ export const Question: React.FC<{
   onClick: (choice: number) => void;
 }> = ({ question, options, onClick }) => {
   return (
-    <div>
-      <h2>{question}</h2>
-      <div id="question-options">
+    <>
+      <Typography variant="h2">{question}</Typography>
+      <Box id="question-options">
         {options.map((option: string, i) => {
           return (
             <Button
@@ -20,7 +20,7 @@ export const Question: React.FC<{
             </Button>
           );
         })}
-      </div>
-    </div>
+      </Box>
+    </>
   );
 };

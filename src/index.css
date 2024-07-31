@@ -31,7 +31,7 @@ body {
   color: #001765;
 }
 
-h1 {
+h2 {
   font-size: 3.2em;
   line-height: 1.1;
   background: linear-gradient(
@@ -48,7 +48,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-h2 {
+h3 {
   font-size: 3.2em;
   line-height: 1.1;
   color: #001765;

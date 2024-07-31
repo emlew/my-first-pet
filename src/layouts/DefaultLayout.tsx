@@ -3,9 +3,9 @@ import { NavBar } from "../components";
 
 export const DefaultLayout: React.FC = () => {
   return (
-    <div>
+    <>
       <NavBar />
       <Outlet />
-    </div>
+    </>
   );
 };

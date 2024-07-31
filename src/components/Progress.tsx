@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { ProgressBar } from "./ProgressBar";
 
 export const Progress: React.FC<{
@@ -10,7 +11,7 @@ export const Progress: React.FC<{
   // TODO: bug fix -- progress bar colors don't reset when quiz resets
 
   return (
-    <div id="progress">
+    <Box id="progress">
       {Object.entries(scores).map((p) => {
         return (
           <ProgressBar
@@ -21,6 +22,6 @@ export const Progress: React.FC<{
           />
         );
       })}
-    </div>
+    </Box>
   );
 };

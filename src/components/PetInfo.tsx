@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PETS } from "../data";
 import { Tabs } from "./Tabs";
-import { Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export const PetInfo: React.FC = () => {
   const [selectedPet, setSelectedPet] = useState("");
@@ -14,10 +14,10 @@ export const PetInfo: React.FC = () => {
 
   if (selectedPet) {
     tabContent = (
-      <div id="tab-content">
-        <h3>{PETS[selectedPet].name}</h3>
-        <p>{PETS[selectedPet].info}</p>
-      </div>
+      <Box id="tab-content">
+        <Typography variant="h4">{PETS[selectedPet].name}</Typography>
+        <Typography>{PETS[selectedPet].info}</Typography>
+      </Box>
     );
   }
 
