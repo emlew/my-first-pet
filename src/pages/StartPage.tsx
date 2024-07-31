@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 
 export const StartPage: React.FC = () => {
+  // TODO: match link styles to button styles
   return (
     <>
       <img className="logo" src={logoImg} alt="Pet Project Logo" />
