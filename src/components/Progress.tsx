@@ -8,7 +8,6 @@ export const Progress: React.FC<{
   isFinished: boolean;
 }> = ({ scores, isFinished }) => {
   const max = Math.max(...Object.values(scores));
-  // TODO: bug fix -- progress bar colors don't reset when quiz resets
 
   return (
     <Box id="progress">

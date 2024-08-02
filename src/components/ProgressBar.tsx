@@ -6,8 +6,6 @@ export const ProgressBar: React.FC<{
   isWinner: boolean;
   showDetails: boolean;
 }> = ({ score, isWinner, showDetails }) => {
-  // TODO: add color contrast to make details more readable
-  // TODO: add mobile functionality
   return (
     <Box
       id="progress-bar"

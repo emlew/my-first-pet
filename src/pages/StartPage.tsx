@@ -3,7 +3,6 @@ import logoImg from "../assets/logo.png";
 import { Box, Typography } from "@mui/material";
 
 export const StartPage: React.FC = () => {
-  // TODO: match link styles to button styles
   return (
     <>
       <img className="logo" src={logoImg} alt="Pet Project Logo" />
