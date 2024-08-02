@@ -145,8 +145,8 @@ button.MuiButton-text {
 }
 
 #progress-bar {
-  background-color: white;
-  width: 10vw;
+  background-color: var(--white);
+  width: 8vw;
   border-radius: 6px;
   z-index: 1;
 }

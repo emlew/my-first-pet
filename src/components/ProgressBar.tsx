@@ -14,6 +14,7 @@ export const ProgressBar: React.FC<{
       style={{
         height: score[1] > 0 ? score[1] * 10 + "vh" : "10vh",
         background: isWinner ? "#3E8AD6" : "default",
+        padding: 10
       }}
     >
       <Typography variant="h5">{showDetails && score[0]}</Typography>
