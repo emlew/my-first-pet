@@ -13,7 +13,7 @@ export const ProgressBar: React.FC<{
       id="progress-bar"
       style={{
         height: score[1] > 0 ? score[1] * 10 + "vh" : "10vh",
-        background: isWinner ? "#3E8AD6" : "default",
+        background: isWinner ? "#3E8AD6" : "#ffffff",
         padding: 10
       }}
     >
