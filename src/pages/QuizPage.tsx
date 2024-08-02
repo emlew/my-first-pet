@@ -6,7 +6,7 @@ const petNames = Object.keys(PETS);
 
 export const QuizPage: React.FC = () => {
   const [scores, setScores] = useState(
-    Object.fromEntries(petNames.map((p) => [p, 1])),
+    Object.fromEntries(petNames.map((p) => [p, 1]))
   );
   const [isFinished, setIsFinished] = useState(false);
   const [choices, setChoices] = useState<number[][]>([]);
@@ -14,7 +14,7 @@ export const QuizPage: React.FC = () => {
   const updateScores = (updates?: number[]) => {
     if (!updates) {
       const newScores = Object.fromEntries(
-        Object.entries(scores).map((p, i) => [p[0], p[1] - choices[0][i]]),
+        Object.entries(scores).map((p, i) => [p[0], p[1] - choices[0][i]])
       );
       setScores(newScores);
       setChoices((prev) => {
@@ -23,7 +23,7 @@ export const QuizPage: React.FC = () => {
       });
     } else {
       const newScores = Object.fromEntries(
-        Object.entries(scores).map((p, i) => [p[0], p[1] + updates[i]]),
+        Object.entries(scores).map((p, i) => [p[0], p[1] + updates[i]])
       );
       setScores(newScores);
       setChoices((prev) => {

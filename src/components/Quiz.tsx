@@ -1,7 +1,7 @@
 import { Question } from "./Question";
 import { useState } from "react";
 import { QUESTIONS } from "../data";
-import { LinearProgress, Button } from "@mui/material";
+import { LinearProgress, Button, Box } from "@mui/material";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
 type Props = {
@@ -42,22 +42,36 @@ export const Quiz: React.FC<Props> = ({ updateFn, onFinish, onReset }) => {
         value={(100 * questionNumber) / QUESTIONS.length}
         color={"inherit"}
       />
-      {questionNumber > 0 && (
-        <Button onClick={handleReset}>
-          <RestartAltIcon />
-          Restart
-        </Button>
-      )}
-      {questionNumber < QUESTIONS.length && (
-        <Question
-          question={QUESTIONS[questionNumber].question}
-          options={QUESTIONS[questionNumber].options}
-          onClick={handleClick}
-        />
-      )}
-      {questionNumber > 0 && questionNumber < QUESTIONS.length && (
-        <Button onClick={handleReverseClick}>Back</Button>
-      )}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          zIndex: 20,
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "90vw",
+          justifyContent: "center",
+        }}
+      >
+        {questionNumber > 0 && (
+          <Button onClick={handleReset}>
+            <RestartAltIcon />
+            Restart
+          </Button>
+        )}
+        {questionNumber < QUESTIONS.length && (
+          <Question
+            question={QUESTIONS[questionNumber].question}
+            options={QUESTIONS[questionNumber].options}
+            onClick={handleClick}
+          />
+        )}
+        {questionNumber > 0 && questionNumber < QUESTIONS.length && (
+          <Button onClick={handleReverseClick}>Back</Button>
+        )}
+      </Box>
     </>
   );
 };
