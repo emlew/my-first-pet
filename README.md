@@ -1,5 +1,6 @@
 # My First Pet: Which Pet is Best for You?
 Welcome to My First Pet! This application, built with React and Vite, helps users determine which pet would be best suited for them based on their preferences and lifestyle.
+When building, I focused on creating a strong base app that uses React state and MUI components.
 
 ## Features
 - Interactive Quiz: Users can answer a series of questions to find out which pet is the best match for them.
